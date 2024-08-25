@@ -22,7 +22,7 @@ np.random.seed(0)
 
 # Global Variable
 modelPAth = 'models/best.pt'
-imgPath = 'images/d.jpg'
+imgPath = 'images/2.jpg'
 
 
 def letterbox(im, new_shape=(640, 640), color=(114, 114, 114), auto=True, scaleFill=False, scaleup=True, stride=32):
@@ -183,7 +183,7 @@ class YOLOv8Heatmap:
         class_name = predict()
         color = [255, 0, 0]
         if class_name == 'iqlab':
-            color = [150, 150, 150]
+            color = [64, 255, 0]
         elif class_name == 'ikhfa syafawi':
             color = [255, 255, 0]
         else:
@@ -237,7 +237,7 @@ def get_params():
         'layer': [10, 12, 14, 16, 18, 21],
         # 'layer': [21],
         'backward_type': 'class',
-        'conf_threshold': 0.2,
+        'conf_threshold': 0.5,
         'ratio': 0.02,
         'show_box': True,
         'renormalize': True
